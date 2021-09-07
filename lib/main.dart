@@ -20,6 +20,22 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class TextWidget extends StatelessWidget {
+  const TextWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Text(
+          "TEXT",
+          style: TextStyle(fontSize: 80.0, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
+}
+
 class MyContainer extends StatelessWidget {
   const MyContainer({Key? key}) : super(key: key);
 
