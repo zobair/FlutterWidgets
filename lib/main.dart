@@ -20,6 +20,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class TextWidget extends StatelessWidget {
+  const TextWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
 class MyContainer extends StatelessWidget {
   const MyContainer({Key? key}) : super(key: key);
 
