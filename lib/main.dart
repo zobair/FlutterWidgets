@@ -15,23 +15,51 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Home(),
+      home: ColumnWidget(),
     );
   }
 }
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class ColumnWidget extends StatelessWidget {
+  const ColumnWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Center(
-          child: Text(
-            "Flutter Widgets",
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
-          ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          verticalDirection: VerticalDirection.down,
+          children: [
+            Container(
+              width: 80,
+              height: 80,
+              decoration: BoxDecoration(
+                  color: Color(0xFF8560a8),
+                  borderRadius: BorderRadius.circular(12)),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Container(
+              width: 160,
+              height: 80,
+              decoration: BoxDecoration(
+                  color: Color(0xFF1cbbb4),
+                  borderRadius: BorderRadius.circular(12)),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Container(
+              width: 80,
+              height: 80,
+              decoration: BoxDecoration(
+                  color: Color(0xFFf26d7d),
+                  borderRadius: BorderRadius.circular(12)),
+            )
+          ],
         ),
       ),
     );
