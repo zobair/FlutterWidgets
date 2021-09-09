@@ -29,6 +29,8 @@ class RowWidget extends StatelessWidget {
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
+          //crossAxisAlignment: CrossAxisAlignment.end,
+          //mainAxisSize: MainAxisSize.max,
           children: [
             Container(
               width: 80,
