@@ -26,12 +26,74 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          child: Text(
-            "Flutter Widgets",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(32, 64, 32, 32),
+          child: Column(
+            children: [
+              CircleAvatar(
+                backgroundColor: Colors.grey,
+                radius: 48,
+              ),
+              SizedBox(height: 64.0),
+              Expanded(
+                flex: 1,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Welcome to",
+                      style: TextStyle(
+                        color: Colors.blue[800],
+                        fontFamily: 'gotic',
+                        fontSize: 42.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      "yourapp",
+                      style: TextStyle(
+                        fontFamily: 'gotic',
+                        fontSize: 32.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 12),
+                    Text(
+                      "This app for you to better experience of life",
+                      style: TextStyle(
+                        fontFamily: 'icomoon',
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 58,
+                    child: Center(child: Text("Register")),
+                    decoration: BoxDecoration(
+                      color: Colors.blue[800],
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                  ),
+                  SizedBox(height: 24.0),
+                  Container(
+                    width: double.infinity,
+                    height: 58,
+                    child: Center(child: Text("Login")),
+                    decoration: BoxDecoration(
+                      color: Colors.blue[100],
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                  ),
+                ],
+              )
+            ],
           ),
         ),
       ),
