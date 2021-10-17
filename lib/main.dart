@@ -29,9 +29,12 @@ class Home extends StatelessWidget {
       body: Center(
         child: Container(
           child: Text(
-            "Flutter Widgets",
+            "I'm custome font",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 80,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'festive'),
           ),
         ),
       ),
