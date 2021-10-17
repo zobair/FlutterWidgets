@@ -26,14 +26,19 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          child: Text(
-            "Flutter Widgets",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
-          ),
+      appBar: AppBar(
+        backgroundColor: Color(0xffeb3434),
+        title: Text(
+          'Home',
+          style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.w500),
         ),
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {
+            //show menu
+          },
+        ),
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.done))],
       ),
     );
   }
