@@ -27,14 +27,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: Text(
-            "Flutter Widgets",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
-          ),
-        ),
-      ),
+          child: Image(
+        image: NetworkImage('image address'),
+        fit: BoxFit.contain,
+        alignment: Alignment.center,
+      )),
     );
   }
 }
