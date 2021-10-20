@@ -27,12 +27,20 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: Text(
-            "Flutter Widgets",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.home,
+              size: 50.0,
+            ),
+            SizedBox(width: 30.0),
+            Icon(
+              Icons.done,
+              size: 50.0,
+              color: Color(0xFFff2d41),
+            )
+          ],
         ),
       ),
     );
