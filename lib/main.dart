@@ -26,15 +26,23 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          child: Text(
-            "Flutter Widgets",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
+        body: Center(
+      child: Container(
+        child: Padding(
+          padding: EdgeInsets.all(12.0),
+          child: TextField(
+            keyboardType: TextInputType.emailAddress,
+            obscureText: false,
+            decoration: InputDecoration(
+              border:
+                  OutlineInputBorder(borderRadius: BorderRadius.circular(5.0)),
+              labelText: "email",
+            ),
+            onSubmitted: (submitValue) {},
+            onChanged: (changedValue) {},
           ),
         ),
       ),
-    );
+    ));
   }
 }
