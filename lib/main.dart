@@ -20,27 +20,37 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  bool isFavorit = false;
+
+  IconData favoritToggle() {
+    if (isFavorit) {
+      return Icons.favorite_outline;
+    }
+
+    return Icons.favorite;
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.home,
-              size: 50.0,
-            ),
-            SizedBox(width: 30.0),
-            Icon(
-              Icons.done,
-              size: 50.0,
-              color: Color(0xFFff2d41),
-            )
-          ],
+        child: IconButton(
+          icon: Icon(favoritToggle()),
+          iconSize: 80.0,
+          color: Colors.red,
+          onPressed: () {
+            setState(() {
+              isFavorit = !isFavorit;
+            });
+          },
         ),
       ),
     );
