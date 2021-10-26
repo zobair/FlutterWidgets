@@ -27,12 +27,12 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: Text(
-            "Flutter Widgets",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
-          ),
+        child: CircleAvatar(
+          backgroundColor: Colors.black,
+          foregroundColor: Colors.white,
+          backgroundImage: NetworkImage('url'),
+          child: Text("Avatar"),
+          radius: 45.0,
         ),
       ),
     );
