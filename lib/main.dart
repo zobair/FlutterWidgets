@@ -27,14 +27,27 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
-          child: Text(
-            "Flutter Widgets",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
+          child: Stack(
+        alignment: Alignment.topRight,
+        fit: StackFit.loose,
+        children: [
+          Container(
+            width: 250,
+            height: 250,
+            decoration: BoxDecoration(
+                color: Color(0xffc4df9b),
+                borderRadius: BorderRadius.circular(8)),
           ),
-        ),
-      ),
+          Container(
+            width: 150,
+            height: 50,
+            margin: EdgeInsets.fromLTRB(0, 210, 20, 0),
+            decoration: BoxDecoration(
+                color: Color(0xfff49ac1),
+                borderRadius: BorderRadius.circular(8)),
+          )
+        ],
+      )),
     );
   }
 }
