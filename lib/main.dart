@@ -26,14 +26,11 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Container(
-          child: Text(
-            "Flutter Widgets",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
-          ),
-        ),
+      body: ListView(
+        padding: EdgeInsets.all(12),
+        reverse: false,
+        scrollDirection: Axis.vertical,
+        children: [],
       ),
     );
   }
