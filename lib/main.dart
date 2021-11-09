@@ -30,8 +30,45 @@ class Home extends StatelessWidget {
         padding: EdgeInsets.all(12),
         reverse: false,
         scrollDirection: Axis.vertical,
-        children: [],
+        children: [
+          ListTile(
+            leading: CircleAvatar(
+              backgroundColor: Colors.purple,
+            ),
+            title: Text("Title 3"),
+            subtitle: Text("description"),
+            trailing: (Icon(Icons.more_vert)),
+            onLongPress: () {
+              //dosumting
+            },
+            onTap: () {
+              //dosumting
+            },
+          )
+        ],
       ),
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ListView(
+        padding: EdgeInsets.all(12),
+        reverse: false,
+        scrollDirection: Axis.vertical,
+        children: [],
+      )
+*/
