@@ -21,16 +21,35 @@ class MyApp extends StatelessWidget {
 }
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  Home({Key? key}) : super(key: key);
+
+  List<String> myData = [
+    'one',
+    'two',
+    'three',
+    'foure',
+    '.',
+    '.',
+    '.',
+    'n',
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
+      body: ListView.builder(
         padding: EdgeInsets.all(12),
         reverse: false,
         scrollDirection: Axis.vertical,
-        children: [],
+        itemCount: myData.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+            height: 60,
+            child: Center(
+              child: Text(myData[index]),
+            ),
+          );
+        },
       ),
     );
   }
