@@ -20,18 +20,33 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  Color lightColor = Colors.white;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       body: Center(
         child: Container(
-          child: Text(
-            "Flutter Widgets",
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
+          child: GestureDetector(
+            child: Icon(
+              Icons.light,
+              color: lightColor,
+              size: 48,
+            ),
+            onTap: () {
+              setState(() {
+                lightColor = Colors.yellow;
+              });
+            },
           ),
         ),
       ),
