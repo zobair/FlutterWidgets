@@ -20,9 +20,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +40,31 @@ class Home extends StatelessWidget {
             style: TextStyle(fontSize: 80, fontWeight: FontWeight.bold),
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.purple[800],
+        currentIndex: index,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.input),
+            label: "input",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: "settings",
+          ),
+        ],
+        onTap: (int selectedItem) {
+          setState(() {
+            index = selectedItem;
+          });
+        },
       ),
     );
   }
